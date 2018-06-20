@@ -5,8 +5,9 @@ import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import UserListComponent from './UserListComponent';
+import MainComponent from './MainComponent';
 import Typography from '@material-ui/core/Typography';
-
+import { BrowserRouter } from 'react-router-dom'
 
 const drawerWidth = 240;
 
@@ -35,7 +36,7 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar,
 });
 
-function PsToolbar(props) {
+function PhotoShare(props) {
   const { classes } = props;
 
   return (
@@ -56,16 +57,20 @@ function PsToolbar(props) {
         <div className={classes.toolbar} />
         <UserListComponent/>
       </Drawer>
+      
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
+        <BrowserRouter>
+          <MainComponent />
+        </BrowserRouter>
       </main>
+      
     </div>
   );
 }
 
-PsToolbar.propTypes = {
+PhotoShare.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(PsToolbar);
+export default withStyles(styles)(PhotoShare);

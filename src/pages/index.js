@@ -1,13 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Button from '@material-ui/core/Button';
-// import Dialog from '@material-ui/core/Dialog';
-// import DialogTitle from '@material-ui/core/DialogTitle';
-// import DialogContent from '@material-ui/core/DialogContent';
-// import DialogContentText from '@material-ui/core/DialogContentText';
-// import DialogActions from '@material-ui/core/DialogActions';
-// import Typography from '@material-ui/core/Typography';
-import PsToolbar from '../components/PsToolbar';
+import PhotoShare from '../components/PhotoShare';
 import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../withRoot';
 
@@ -24,7 +17,7 @@ class Index extends React.Component {
     
     return (
       <div className={classes.root}>
-        <PsToolbar />
+        <PhotoShare />
       </div>
     );
   }
